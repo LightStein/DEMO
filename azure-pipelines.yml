@@ -9,7 +9,15 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest'
 
+
+
 steps:
+
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: 'MAVEN_OPTS="-Xmx4G"'
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
