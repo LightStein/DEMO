@@ -14,10 +14,11 @@ public class DriverModule extends AbstractModule {
 
     /** Configure method. It binds a selected type of BrowserDriver. */
     protected synchronized void configure() {
-        ChromeDriverManager.chromedriver().setup();
+
         // Set Chromedriver executable path.
         setChromedriverPath();
 
+        ChromeDriverManager.chromedriver().setup();
         ChromeOptions chromeoptions = new ChromeOptions();
         chromeoptions.addArguments("--headless");
         // Bind WebDriver object to ChromeDriver.
