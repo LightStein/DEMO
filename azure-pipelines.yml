@@ -3,8 +3,15 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
-trigger:
-- master
+trigger: none
+
+schedules:
+  - cron: "*/5 * * * *"
+    displayName: "check health status every 3 minutes"
+    branches:
+      include:
+        - "for_azure"
+    always: true
 
 pool:
   vmImage: 'ubuntu-latest'
