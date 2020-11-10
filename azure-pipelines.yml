@@ -10,7 +10,7 @@ schedules:
     displayName: "check health status every 3 minutes"
     branches:
       include:
-        - "for_azure"
+        - "master"
     always: true
 
 pool:
