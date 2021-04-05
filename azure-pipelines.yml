@@ -5,13 +5,13 @@
 
 trigger: none
 
-schedules:
-  - cron: "*/5 * * * *"
-    displayName: "check health status every 3 minutes"
-    branches:
-      include:
-        - "master"
-    always: true
+# schedules:
+#   - cron: "*/5 * * * *"
+#     displayName: "check health status every 3 minutes"
+#     branches:
+#       include:
+#         - "master"
+#     always: true
 
 pool:
   vmImage: 'ubuntu-latest'
